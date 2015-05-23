@@ -1,0 +1,16 @@
+na stronie navigation.xhtml dodaj przycisk typu commandLink przekierowuj¹cy do strony shopping_cart.xhtml;
+
+przycisk powinien wyœwietlaæ aktualn¹ liczbê elementów w koszyku, w tym celu w komponencie commandLink nale¿y zagnieŸdziæ komponent outputText posiadaj¹cy unikalny identyfikator oraz wartoœæ pobieran¹ z kontrolera obs³uguj¹cego koszyk
+
+w celu wyœwietlania zawartoœci koszyka do strony shopping_cart.xhtml dodaj komponent dataList
+
+Zaktualizuj plik faces-config.xml o konfiguracjê zasobów:
+<resource-bundle>
+	<base-name>pl.kb.messages</base-name>
+	<var>text</var>
+</resource-bundle>
+
+W katalogu resources utwórz pliki properties dla ka¿dego wspieranego jêzyka. Œcie¿ka do plików w ramach katalogu resources powinna byæ zgodna ze œcie¿ka u¿yt¹ w parametrze <base-name> konfiguracji faces-config.xml
+
+Na stronie layout.xhtml korzystaj¹c z komponentu loadBundle zaimportuj skonfigurowany resource-bundle.
+
