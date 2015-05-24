@@ -1,16 +1,11 @@
-na stronie navigation.xhtml dodaj przycisk typu commandLink przekierowuj¹cy do strony shopping_cart.xhtml;
+1) Utwórz interfejs zdalny EJB dla serwisu BookServiceBean
 
-przycisk powinien wyœwietlaæ aktualn¹ liczbê elementów w koszyku, w tym celu w komponencie commandLink nale¿y zagnieŸdziæ komponent outputText posiadaj¹cy unikalny identyfikator oraz wartoœæ pobieran¹ z kontrolera obs³uguj¹cego koszyk
+2) U¿ywaj¹c funkcji œrodowiska Eclipse wyeksportuj klasy artefaktu sampleapp-core do pakczki typu JAR (skompiowane klasy + kod Ÿród³owy) - zapisz plik na dysku
 
-w celu wyœwietlania zawartoœci koszyka do strony shopping_cart.xhtml dodaj komponent dataList
+3) Utwórz nowy projekt EJB u¿ywaj¹c domyœlnych wartoœci kreatora
+U¿ywaj¹c funkcji œrodowiska Eclipse zaktualizuj classpath dodaj¹c do projektu bibliotekê jboss-client.jar z katalogu {wildfly_home}\bin\client oraz dodaj¹c wyeksportowany wczeœniej JAR klasami artefaktu sampleapp-core
 
-Zaktualizuj plik faces-config.xml o konfiguracjê zasobów:
-<resource-bundle>
-	<base-name>pl.kb.messages</base-name>
-	<var>text</var>
-</resource-bundle>
+4) W utworzonym projekcie umieœæ klasê EJBClient.
 
-W katalogu resources utwórz pliki properties dla ka¿dego wspieranego jêzyka. Œcie¿ka do plików w ramach katalogu resources powinna byæ zgodna ze œcie¿ka u¿yt¹ w parametrze <base-name> konfiguracji faces-config.xml
-
-Na stronie layout.xhtml korzystaj¹c z komponentu loadBundle zaimportuj skonfigurowany resource-bundle.
-
+5) Korzystaj¹c z logów serwera odnajdŸ adres pod jakim zarejestrowany jest interfejs zdalny dla us³ugi BookServiceBean i zaktualizuj wywo³anie metody lookup.
+ 

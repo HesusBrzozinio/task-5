@@ -11,7 +11,7 @@ import javax.ejb.Stateless;
 import model.dto.Book;
 
 @Stateless
-public class BookServiceBean implements BookServiceLocal {
+public class BookServiceBean implements BookServiceLocal, BookServiceRemote {
 
 	private List<Book> books;
 
